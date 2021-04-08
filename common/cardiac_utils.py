@@ -1736,7 +1736,7 @@ def aorta_pass_quality_control(image, seg):
         pixel_thres = 10
         for t in range(T):
             seg_t = seg[:, :, :, t]
-            cc, n_cc = skimage.measure.label(seg_t == l, neighbors=8, return_num=True)
+            cc, n_cc = skimage.measure.label(seg_t == l, connectivity=3, return_num=True)
             count_cc = 0
             for i in range(1, n_cc + 1):
                 binary_cc = (cc == i)
