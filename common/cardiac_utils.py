@@ -23,6 +23,7 @@ import matplotlib.pyplot as plt
 from vtk.util import numpy_support
 from scipy import interpolate
 import skimage
+import skimage.measure
 from ukbb_cardiac.common.image_utils import *
 
 
